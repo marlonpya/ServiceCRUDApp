@@ -403,8 +403,4 @@ SongListFragment
 ## 👤 Author
 
 **Your name**
-- GitHub: [@your-username](https://github.com/your-username)
-
-## 📄 License
-
-This project is licensed under the [MIT](LICENSE) License.
+- GitHub: [@marlonpya](https://github.com/marlonpya)
