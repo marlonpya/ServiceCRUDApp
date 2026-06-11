@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafo de navegación: define los 3 destinos y las acciones entre ellos -->
+<!-- Los argumentos se pasan como Bundle directamente, sin Safe Args -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/songListFragment">
+
+    <!-- Pantalla 1: lista de canciones -->
+    <fragment
+        android:id="@+id/songListFragment"
+        android:name="com.app.servicecrudapp.presentation.songlist.SongListFragment"
+        android:label="Canciones"
+        tools:layout="@layout/fragment_song_list">
+
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/songDetailFragment" />
+
+        <action
+            android:id="@+id/action_list_to_form"
+            app:destination="@id/songFormFragment" />
+    </fragment>
+
+    <!-- Pantalla 2: detalle de una canción -->
+    <fragment
+        android:id="@+id/songDetailFragment"
+        android:name="com.app.servicecrudapp.presentation.songdetail.SongDetailFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_song_detail">
+
+        <action
+            android:id="@+id/action_detail_to_form"
+            app:destination="@id/songFormFragment" />
+    </fragment>
+
+    <!-- Pantalla 3: formulario de creación y edición -->
+    <fragment
+        android:id="@+id/songFormFragment"
+        android:name="com.app.servicecrudapp.presentation.songform.SongFormFragment"
+        android:label="Formulario"
+        tools:layout="@layout/fragment_song_form" />
+
+</navigation>
